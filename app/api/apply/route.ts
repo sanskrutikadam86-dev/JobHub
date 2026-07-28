@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
 const applications = db.collection("applications");
 
 const job = await jobs.findOne({
-  _id: new ObjectId(body.jobId),
+  _id: new ObjectId(body.jobid),
 });
 
 if (!job) {

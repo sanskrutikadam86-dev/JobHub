@@ -3,10 +3,10 @@ import client from "@/lib/mongodb";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ jobId: string }> }
+  { params }: { params: Promise<{ jobid: string }> }
 ) {
   try {
-    const { jobId } = await params;
+    const { jobid } = await params;
 
     const db = client.db("jobhub");
 
@@ -14,7 +14,7 @@ export async function GET(
 
     const applicants = await applications
       .find({
-        jobId: jobId,
+        jobid: jobid,
       })
       .sort({
         appliedAt: -1,

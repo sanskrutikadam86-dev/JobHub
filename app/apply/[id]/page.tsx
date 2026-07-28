@@ -25,7 +25,7 @@ const [coverLetter, setCoverLetter] = useState("");
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        jobId: params.id,
+        jobid: params.id,
         fullName,
         email,
         phone,
