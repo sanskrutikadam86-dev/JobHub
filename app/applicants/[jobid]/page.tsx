@@ -9,7 +9,7 @@ export default function ApplicantsPage() {
 
   useEffect(() => {
     const fetchApplicants = async () => {
-      const res = await fetch(`/api/applicants/${params.jobId}`);
+      const res = await fetch(`/api/applicants/${params.jobid}`);
       const data = await res.json();
 
       setApplicants(data);

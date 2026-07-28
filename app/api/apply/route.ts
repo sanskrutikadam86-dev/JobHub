@@ -27,7 +27,7 @@ if (!job) {
 }
 
 await applications.insertOne({
-  jobId: body.jobId,
+  jobid: body.jobid,
 
   jobTitle: job.jobTitle,
   companyName: job.companyName,

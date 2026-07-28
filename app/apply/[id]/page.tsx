@@ -83,7 +83,7 @@ const [coverLetter, setCoverLetter] = useState("");
         </h1>
 
         <p className="mt-3 text-center text-gray-500">
-          Job ID: {params.id}
+          Job id: {params.id}
         </p>
 
         <form
