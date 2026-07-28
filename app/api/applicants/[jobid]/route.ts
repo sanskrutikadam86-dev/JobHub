@@ -1,12 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import client from "@/lib/mongodb";
+import { Params } from "next/dist/server/request/params";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ jobid: string }> }
+  { params }: { params: { jobid: string } }
 ) {
   try {
-    const { jobid } = await params;
+    const { jobid } =  params;
 
     const db = client.db("jobhub");
 
