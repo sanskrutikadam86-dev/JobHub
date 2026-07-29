@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import client from "@/lib/mongodb";
-import { Params } from "next/dist/server/request/params";
+
 
 export async function GET(
   req: NextRequest,
